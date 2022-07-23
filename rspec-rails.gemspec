@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
     if ENV['RSPEC_CI']
       s.add_runtime_dependency "rspec-#{name}", ENV.fetch('RSPEC_VERSION', '3.12.0.pre')
     elsif RSpec::Rails::Version::STRING =~ /pre/ # prerelease builds
-      expected_rspec_version = "3.12.0.pre"
+      expected_rspec_version = "4.0.0.pre"
       s.add_runtime_dependency "rspec-#{name}", "= #{expected_rspec_version}"
     else
       expected_rspec_version = "4.0.0.pre"
